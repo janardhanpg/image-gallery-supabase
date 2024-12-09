@@ -79,7 +79,7 @@ function App() {
   };
   async function deleteImage(imageName) {
     const { error } = await supabase.storage
-      .from("images")
+      .from("Images")
       .remove([user.id + "/" + imageName]);
 
     if (error) {
